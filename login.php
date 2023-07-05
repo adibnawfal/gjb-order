@@ -20,7 +20,12 @@ include('./src/components/pagevalidation.php') ?>
         <?php include('./src/components/errors.php'); ?>
         <input type="text" name="username" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
-        <a href="#" class="forgot-password">Forgot Password?</a>
+        <a href="forgotpassword.php <?php
+        unset($_SESSION['isSelectMenu']);
+        unset($_SESSION['isEditOrder']);
+        unset($_SESSION['isViewOrders']);
+        unset($_SESSION['editOrderKey']);
+        ?>" class="forgot-password">Forgot Password?</a>
         <button type="submit" name="login">Login</button>
       </form>
     </div>

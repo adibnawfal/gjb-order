@@ -147,6 +147,64 @@ if (isset($_POST['login'])) {
 }
 
 /**
+ * Forgot password.
+ */
+if (isset($_POST['forgotPassword'])) {
+  // receive all input values from the form
+  $username = $conn->real_escape_string($_POST['username']);
+  $email = $conn->real_escape_string($_POST['email']);
+  $password1 = $conn->real_escape_string($_POST['password1']);
+  $password2 = $conn->real_escape_string($_POST['password2']);
+
+  // form validation: ensure that the form is correctly filled
+  // by adding (array_push()) corresponding error unto $errors array
+  if (empty($username)) {
+    array_push($errors, "Username is required!");
+  }
+
+  if (empty($email)) {
+    array_push($errors, "Email address is required!");
+  }
+
+  if (empty($password1)) {
+    array_push($errors, "New Password is required!");
+  }
+
+  if ($password1 != $password2) {
+    array_push($errors, "Confirm Password do not match!");
+  }
+
+  // first check the database to make sure
+  // the username and email exist in the database
+  $userCheckQuery = "SELECT * FROM user 
+  WHERE username='$username' 
+  AND email='$email' LIMIT 1";
+  $result = $conn->query($userCheckQuery);
+  $user = $result->fetch_assoc();
+
+  if (!$user) { // if user do not exists
+    array_push($errors, "User do not exists!");
+  }
+
+  // change user password if there are no errors in the form
+  if (count($errors) == 0) {
+    $password = md5($password1); // encrypt the password before saving in the database
+    $query = "UPDATE user 
+    SET password='$password'  
+    WHERE username='$username' 
+    AND email='$email'";
+
+    if ($conn->query($query) === true) {
+      $message = 'Password has been successfully changed.';
+      echo "<script>
+      alert('$message');
+      location.replace('http://localhost/gjb-order/login.php');
+      </script>";
+    }
+  }
+}
+
+/**
  * Validate session type and dining option. Logout user
  */
 if (!isset($_SESSION['sessionType']) || isset($_POST['logout'])) {

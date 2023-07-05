@@ -1063,6 +1063,68 @@ body {
   background-color: var(--gold);
 }
 
+/* forgotpassword.php */
+
+.forgot-password .container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.forgot-password .container .left {
+  width: 50%;
+  background-image: url("../images/register-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.forgot-password .container .right {
+  width: 50%;
+  padding: 100px 130px;
+}
+
+.forgot-password .container .right .title {
+  font-size: var(--largeSize);
+  font-weight: var(--extraBold);
+}
+
+.forgot-password .container .right .desc {
+  font-size: var(--regularSize);
+  font-weight: var(--light);
+  margin-bottom: 30px;
+}
+
+.forgot-password .container .right .forgotpass-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.forgot-password .container .right .forgotpass-form input {
+  width: 100%;
+  height: 60px;
+  border-radius: 20px;
+  padding: 0 20px;
+  margin-bottom: 15px;
+  font-size: var(--smallSize);
+  font-weight: var(--semiBold);
+  background-color: var(--darkGray);
+}
+
+.forgot-password .container .right .forgotpass-form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  border-radius: 20px;
+  margin-top: 15px;
+  font-size: var(--regularSize);
+  font-weight: var(--bold);
+  color: var(--black);
+  background-color: var(--gold);
+}
+
 /* account.php */
 
 .account .container {

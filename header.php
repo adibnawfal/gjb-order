@@ -1,7 +1,7 @@
 <?php $fileName = basename($_SERVER['PHP_SELF'], ".php"); ?>
 <div class="header">
   <div class="head-container">
-    <?php if ($fileName != "menu" && $fileName != "vieworders" && !$updateAccount) { ?>
+    <?php if ($fileName != "menu" && $fileName != "vieworders" && $fileName != "forgotpassword" && !$updateAccount) { ?>
       <a href="<?php if ($fileName != "index" && $_SESSION['sessionType'] != "Admin") {
         echo "./home.php";
       } ?>">
@@ -51,7 +51,7 @@
 
     <?php } ?>
   </div>
-  <?php if ($fileName != "index" && $fileName != "menu" && $fileName != "vieworders" && !$updateAccount) { ?>
+  <?php if ($fileName != "index" && $fileName != "menu" && $fileName != "vieworders" && $fileName != "forgotpassword" && !$updateAccount) { ?>
     <div>
       <a href="<?php if ($_SESSION['sessionType'] == "Guest") {
         echo "./register.php";

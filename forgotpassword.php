@@ -18,6 +18,7 @@ include('./src/components/pagevalidation.php') ?>
       <p class="desc">Enter the email address associated with your account.</p>
       <form method="post" action="forgotpassword.php" class="forgotpass-form">
         <?php include('./src/components/errors.php'); ?>
+        <input type="text" name="username" placeholder="Username">
         <input type="email" name="email" placeholder="Email Address">
         <input type="password" name="password1" placeholder="New Password">
         <input type="password" name="password2" placeholder="Confirm Password">
