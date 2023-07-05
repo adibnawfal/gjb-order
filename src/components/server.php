@@ -387,6 +387,7 @@ if (isset($_POST['selectMenu'])) {
   unset($_SESSION['isEditOrder']);
   unset($_SESSION['isViewOrders']);
   unset($_SESSION['editOrderKey']);
+  unset($_SESSION['isViewDetails']);
   header('location: menu.php');
 }
 
@@ -641,6 +642,7 @@ if (isset($_POST['editOrder'])) {
   $_SESSION['isEditOrder'] = true;
   unset($_SESSION['isSelectMenu']);
   unset($_SESSION['isViewOrders']);
+  unset($_SESSION['isViewDetails']);
   header('location: menu.php');
 }
 
@@ -759,6 +761,7 @@ if (isset($_POST['viewOrders'])) {
   $_SESSION['isViewOrders'] = true;
   unset($_SESSION['isSelectMenu']);
   unset($_SESSION['isEditOrder']);
+  unset($_SESSION['isViewDetails']);
   header('location: vieworders.php');
 }
 
@@ -793,6 +796,7 @@ if (isset($_POST['viewDetails'])) {
     }
   }
 
+  $_SESSION['isViewDetails'] = true;
   unset($_SESSION['isSelectMenu']);
   unset($_SESSION['isEditOrder']);
   unset($_SESSION['isViewOrders']);
@@ -912,6 +916,7 @@ if (isset($_POST['updateAccount'])) {
   unset($_SESSION['isSelectMenu']);
   unset($_SESSION['isEditOrder']);
   unset($_SESSION['isViewOrders']);
+  unset($_SESSION['isViewDetails']);
   unset($_SESSION['editOrderKey']);
 }
 

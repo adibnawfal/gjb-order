@@ -57,25 +57,25 @@ include('./src/components/pagevalidation.php') ?>
               </div>
               <div class="sauce" style="margin-bottom: 30px;">
                 <p class="title">Select Sauce</p>
-                <button type="submit" name="toggleChili" <?php if (isset($_SESSION['isViewOrders'])) { ?> disabled <?php } ?>>
+                <button type="submit" name="toggleChili" <?php if (isset($_SESSION['isViewDetails'])) { ?> disabled <?php } ?>>
                   <p class="custom-txt">Chili</p>
                   <span class="material-symbols-outlined">
                     <?php echo $_SESSION['sauceChili']; ?>
                   </span>
                 </button>
-                <button type="submit" name="toggleKetchup" <?php if (isset($_SESSION['isViewOrders'])) { ?> disabled <?php } ?>>
+                <button type="submit" name="toggleKetchup" <?php if (isset($_SESSION['isViewDetails'])) { ?> disabled <?php } ?>>
                   <p class="custom-txt">Ketchup</p>
                   <span class="material-symbols-outlined">
                     <?php echo $_SESSION['sauceKetchup']; ?>
                   </span>
                 </button>
-                <button type="submit" name="toggleMayonaisse" <?php if (isset($_SESSION['isViewOrders'])) { ?> disabled <?php } ?>>
+                <button type="submit" name="toggleMayonaisse" <?php if (isset($_SESSION['isViewDetails'])) { ?> disabled <?php } ?>>
                   <p class="custom-txt">Mayonaisse</p>
                   <span class="material-symbols-outlined">
                     <?php echo $_SESSION['sauceMayonaisse']; ?>
                   </span>
                 </button>
-                <button type="submit" name="toggleBbq" <?php if (isset($_SESSION['isViewOrders'])) { ?> disabled <?php } ?>>
+                <button type="submit" name="toggleBbq" <?php if (isset($_SESSION['isViewDetails'])) { ?> disabled <?php } ?>>
                   <p class="custom-txt">BBQ</p>
                   <span class="material-symbols-outlined">
                     <?php echo $_SESSION['sauceBbq']; ?>
@@ -87,25 +87,25 @@ include('./src/components/pagevalidation.php') ?>
                   <p class="title">Remove From Order</p>
                   <p class="title" style="color: var(--lightGray)">-RM0.00</p>
                 </div>
-                <button type="submit" name="toggleReLettuce" <?php if (isset($_SESSION['isViewOrders'])) { ?> disabled <?php } ?>>
+                <button type="submit" name="toggleReLettuce" <?php if (isset($_SESSION['isViewDetails'])) { ?> disabled <?php } ?>>
                   <p class="custom-txt">Remove Lettuce</p>
                   <span class="material-symbols-outlined">
                     <?php echo $_SESSION['removeLettuce']; ?>
                   </span>
                 </button>
-                <button type="submit" name="toggleReOnion" <?php if (isset($_SESSION['isViewOrders'])) { ?> disabled <?php } ?>>
+                <button type="submit" name="toggleReOnion" <?php if (isset($_SESSION['isViewDetails'])) { ?> disabled <?php } ?>>
                   <p class="custom-txt">Remove Onion</p>
                   <span class="material-symbols-outlined">
                     <?php echo $_SESSION['removeOnion']; ?>
                   </span>
                 </button>
-                <button type="submit" name="toggleReTomato" <?php if (isset($_SESSION['isViewOrders'])) { ?> disabled <?php } ?>>
+                <button type="submit" name="toggleReTomato" <?php if (isset($_SESSION['isViewDetails'])) { ?> disabled <?php } ?>>
                   <p class="custom-txt">Remove Tomato</p>
                   <span class="material-symbols-outlined">
                     <?php echo $_SESSION['removeTomato']; ?>
                   </span>
                 </button>
-                <button type="submit" name="toggleReCucumber" <?php if (isset($_SESSION['isViewOrders'])) { ?> disabled <?php } ?>>
+                <button type="submit" name="toggleReCucumber" <?php if (isset($_SESSION['isViewDetails'])) { ?> disabled <?php } ?>>
                   <p class="custom-txt">Remove Cucumber</p>
                   <span class="material-symbols-outlined">
                     <?php echo $_SESSION['removeCucumber']; ?>
@@ -117,25 +117,25 @@ include('./src/components/pagevalidation.php') ?>
                   <p class="title">Extra</p>
                   <p class="title" style="color: var(--lightGray)">+RM0.00</p>
                 </div>
-                <button type="submit" name="toggleExLettuce" <?php if (isset($_SESSION['isViewOrders'])) { ?> disabled <?php } ?>>
+                <button type="submit" name="toggleExLettuce" <?php if (isset($_SESSION['isViewDetails'])) { ?> disabled <?php } ?>>
                   <p class="custom-txt">Extra Lettuce</p>
                   <span class="material-symbols-outlined">
                     <?php echo $_SESSION['extraLettuce']; ?>
                   </span>
                 </button>
-                <button type="submit" name="toggleExOnion" <?php if (isset($_SESSION['isViewOrders'])) { ?> disabled <?php } ?>>
+                <button type="submit" name="toggleExOnion" <?php if (isset($_SESSION['isViewDetails'])) { ?> disabled <?php } ?>>
                   <p class="custom-txt">Extra Onion</p>
                   <span class="material-symbols-outlined">
                     <?php echo $_SESSION['extraOnion']; ?>
                   </span>
                 </button>
-                <button type="submit" name="toggleExTomato" <?php if (isset($_SESSION['isViewOrders'])) { ?> disabled <?php } ?>>
+                <button type="submit" name="toggleExTomato" <?php if (isset($_SESSION['isViewDetails'])) { ?> disabled <?php } ?>>
                   <p class="custom-txt">Extra Tomato</p>
                   <span class="material-symbols-outlined">
                     <?php echo $_SESSION['extraTomato']; ?>
                   </span>
                 </button>
-                <button type="submit" name="toggleExCucumber" <?php if (isset($_SESSION['isViewOrders'])) { ?> disabled <?php } ?>>
+                <button type="submit" name="toggleExCucumber" <?php if (isset($_SESSION['isViewDetails'])) { ?> disabled <?php } ?>>
                   <p class="custom-txt">Extra Cucumber</p>
                   <span class="material-symbols-outlined">
                     <?php echo $_SESSION['extraCucumber']; ?>
@@ -147,13 +147,13 @@ include('./src/components/pagevalidation.php') ?>
                 <div class="button">
                   <p class="custom-txt">Cheese <span class="add-on-price">(+RM1.00)</span></p>
                   <div class="plus-minus">
-                    <button type="submit" name="minusAddOnCheese" class="icon-box" <?php if (isset($_SESSION['isViewOrders'])) { ?> disabled <?php } ?>>
+                    <button type="submit" name="minusAddOnCheese" class="icon-box" <?php if (isset($_SESSION['isViewDetails'])) { ?> disabled <?php } ?>>
                       <span class="material-symbols-outlined">do_not_disturb_on</span>
                     </button>
                     <p class="qty-txt">
                       <?php echo $_SESSION['addOnCheese']; ?>
                     </p>
-                    <button type="submit" name="plusAddOnCheese" class="icon-box" <?php if (isset($_SESSION['isViewOrders'])) { ?> disabled <?php } ?>>
+                    <button type="submit" name="plusAddOnCheese" class="icon-box" <?php if (isset($_SESSION['isViewDetails'])) { ?> disabled <?php } ?>>
                       <span class="material-symbols-outlined">add_circle</span>
                     </button>
                   </div>
@@ -161,13 +161,13 @@ include('./src/components/pagevalidation.php') ?>
                 <div class="button">
                   <p class="custom-txt">Egg <span class="add-on-price">(+RM1.00)</span></p>
                   <div class="plus-minus">
-                    <button type="submit" name="minusAddOnEgg" class="icon-box" <?php if (isset($_SESSION['isViewOrders'])) { ?> disabled <?php } ?>>
+                    <button type="submit" name="minusAddOnEgg" class="icon-box" <?php if (isset($_SESSION['isViewDetails'])) { ?> disabled <?php } ?>>
                       <span class="material-symbols-outlined">do_not_disturb_on</span>
                     </button>
                     <p class="qty-txt">
                       <?php echo $_SESSION['addOnEgg']; ?>
                     </p>
-                    <button type="submit" name="plusAddOnEgg" class="icon-box" <?php if (isset($_SESSION['isViewOrders'])) { ?> disabled <?php } ?>>
+                    <button type="submit" name="plusAddOnEgg" class="icon-box" <?php if (isset($_SESSION['isViewDetails'])) { ?> disabled <?php } ?>>
                       <span class="material-symbols-outlined">add_circle</span>
                     </button>
                   </div>
@@ -175,13 +175,13 @@ include('./src/components/pagevalidation.php') ?>
                 <div class="button">
                   <p class="custom-txt">Patty <span class="add-on-price">(+RM2.00)</span></p>
                   <div class="plus-minus">
-                    <button type="submit" name="minusAddOnPatty" class="icon-box" <?php if (isset($_SESSION['isViewOrders'])) { ?> disabled <?php } ?>>
+                    <button type="submit" name="minusAddOnPatty" class="icon-box" <?php if (isset($_SESSION['isViewDetails'])) { ?> disabled <?php } ?>>
                       <span class="material-symbols-outlined">do_not_disturb_on</span>
                     </button>
                     <p class="qty-txt">
                       <?php echo $_SESSION['addOnPatty']; ?>
                     </p>
-                    <button type="submit" name="plusAddOnPatty" class="icon-box" <?php if (isset($_SESSION['isViewOrders'])) { ?> disabled <?php } ?>>
+                    <button type="submit" name="plusAddOnPatty" class="icon-box" <?php if (isset($_SESSION['isViewDetails'])) { ?> disabled <?php } ?>>
                       <span class="material-symbols-outlined">add_circle</span>
                     </button>
                   </div>
