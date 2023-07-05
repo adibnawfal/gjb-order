@@ -45,7 +45,7 @@
         echo "location.replace('http://localhost/gjb-order/summary.php')";
       } else {
         echo "history.back()";
-      } ?>">
+      } ?>; clearScroll();">
         <span class="material-symbols-outlined">arrow_back</span>
       </button>
 

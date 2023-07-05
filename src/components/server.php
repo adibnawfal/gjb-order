@@ -374,6 +374,7 @@ if ($result->num_rows > 0) {
   }
 }
 
+
 /**
  * Select menu.
  */
@@ -389,6 +390,7 @@ if (isset($_POST['selectMenu'])) {
   unset($_SESSION['editOrderKey']);
   unset($_SESSION['isViewDetails']);
   header('location: menu.php');
+  echo "<script>sessionStorage.clear();</script>";
 }
 
 /**
